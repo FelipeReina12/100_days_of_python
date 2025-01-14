@@ -11,23 +11,30 @@
 #     print("¡Hasta luego!")  #Imprime un mensaje de despedida
 
 
-while True:
-    #Preguntar al usuario qué animal quiere ver
-    animal = input("¿Qué animal quieres ver? (Escribe 'Salir' para terminar): ").capitalize()
-    if animal == "Vaca":
-        print("🐮")
-    elif animal == "Perro":
-        print("🐶")
-    elif animal == "Gato":
-        print("🐱")
-    elif animal == "Pájaro":
-        print("🐦")
-    elif animal == "Salir":
-        break  # Salir del bucle si el usuario escribe "Salir"
-    else:
-        print("Animal no reconocido. Intenta con otro.")
+# while True:
+#     #Preguntar al usuario qué animal quiere ver
+#     animal = input("¿Qué animal quieres ver? (Escribe 'Salir' para terminar): ").capitalize()
+#     if animal == "Vaca":
+#         print("🐮")
+#     elif animal == "Perro":
+#         print("🐶")
+#     elif animal == "Gato":
+#         print("🐱")
+#     elif animal == "Pájaro":
+#         print("🐦")
+#     elif animal == "Salir":
+#         break  # Salir del bucle si el usuario escribe "Salir"
+#     else:
+#         print("Animal no reconocido. Intenta con otro.")
     
-    continuar = input("¿Quieres ver otro animal? (Yes/No): ").capitalize()
-    if continuar == "No":
-        break  # Salir del bucle si el usuario no quiere continuar
+#     continuar = input("¿Quieres ver otro animal? (Yes/No): ").capitalize()
+#     if continuar == "No":
+#         break  # Salir del bucle si el usuario no quiere continuar
 
+
+numero = 0
+print("Tabla del 3")
+while numero < 11:
+    print(f"{numero * 3}")
+    numero += 1
+print("Fin")
