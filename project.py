@@ -8,9 +8,7 @@ Sumado a eso usamos las librerias time y os para manejar los tiempos en pantalla
 Todo esto debe estar en un bucle while para que el juego no termine hasta que el usuario decida salir y pueda seguir creando personajes
 """
 
-import time 
-import os
-import random
+import time, os, random
 
 print("""Bienvenido al generador de personajes
 Aqui podras crear personajes con estadisticas aleatorias
@@ -67,3 +65,42 @@ while play == "yes":  #Hacemos un ciclo while para que el juego no se repita
         time.sleep(2)
         os.system("clear")
     exit()
+
+
+"""
+Solucion del curso 100 dias de python
+"""
+
+# import os, random, time
+
+# def rolldice(side):
+#     result =  random.randint(1, side)
+#     return result
+
+# def health():
+#     health_stat = ((rolldice(6) * rolldice(12)) / 2) + 10
+#     return int(health_stat)
+
+# def strength():
+#     strength_stat = ((rolldice(6) * rolldice(8)) / 2 + 12)
+#     return int(strength_stat)
+
+# while True:
+#     print("CHARACTER BUILDER")
+#     print()
+#     name = input("Enter your character's name: ")
+#     type = input("Enter your character's type: ")
+#     print()
+#     print(name)
+#     print(f"HEALTH: {health()}")
+#     print(type)
+#     print(f"STRENGTH: {strength()}")
+#     print()
+#     print("May your name go down in history!")
+#     print()
+#     again = input("Again ? ")
+#     if again == "yes":
+#         continue
+#     else:
+#         break
+# print("Good bye!")
