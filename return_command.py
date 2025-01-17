@@ -47,6 +47,6 @@ while play == "yes":  #Hacemos un ciclo while para que el juego no se repita
   print("Strength:", strength)
   play = input("Do you want to play again?")
   if play != "yes":
+    
     print("Goodbye!")
     exit()
-    
