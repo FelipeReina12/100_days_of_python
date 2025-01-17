@@ -22,35 +22,31 @@ ese numero, luego crear una funcion que tira un dado de 6 caras y un dado de 8 c
 y devuelve el resultado como la salud de un personaje
 """
 
-# import random
-
-# def tirar_dado(tamano):
-#     lanzamiento_1 = random.randint(1, tamano)
-#     print(f"Haz sacado un: {lanzamiento_1}")
-# tamano = int(input("Ingrese el numero de caras del dado:  "))
-# tirar_dado(tamano)
-
 import random
 
-play = "yes"
+play = "yes"  # Definimos una variable para que el juego no se repita
 
-def rollDie(sides):
-  result = random.randint(1,sides)
-  return result
+def dado_1(sides):  #Definimos la funcion dado_1 que es el dado de 6 caras
+  result = random.randint(1,sides)  #Esto hace que el programa elija un numero random entre 1 y el numero de caras del dado
+  return result  #Retornamos el resultado
 
-def roll3die():
-  die1 = rollDie(6)
-  die2 = rollDie(6)
-  die3 = rollDie(6)
-  return die1 * die2 * die3
+def health_personaje():  #Definimos la función healt  
+  die1 = dado_1(6)  #Usamos la función dado_1 que acabamos de crear para tirar un dado de 6 caras 
+  die2 = dado_1(8)  #Usamos la función dado_1 para tirar un dado esta ves de 8 caras
+  return die1 * die2 #Multiplicamos las dos tiradas y retornamos el resultado
 
-while play == "yes":
-  character = input("Name ur character:")
-  health = roll3die()
-  strength = roll3die()
+def strength_personaje():  #Definimos la función strength_personaje 
+  die3 = (health_personaje() * dado_1(6)) /2  #Creamos un tercer lanzamiento usando la función healt y la función dado_1
+  return die3
+
+while play == "yes":  #Hacemos un ciclo while para que el juego no se repita
+  character = input("Name ur character:")  #Pedimos al usuario un nombre de personaje
+  health = health_personaje()  #Llamamos a la función health_personaje y lmacenamos el resultado en una variable llamada health
+  strength = strength_personaje()  #Llamamos a la función strength_personaje y almacenamos el resultado en una variable llamada strength
   print("Health:", health)
   print("Strength:", strength)
-  play = input("Do u want to play again?")
+  play = input("Do you want to play again?")
   if play != "yes":
     print("Goodbye!")
     exit()
+    
